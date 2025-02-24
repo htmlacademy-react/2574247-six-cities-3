@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
-* Студент: [Чайкин Борис](https://up.htmlacademy.ru/react-individual/3/user/2574247).
-* Наставник: `Неизвестно`.
+- Студент: [Чайкин Борис](https://up.htmlacademy.ru/react-individual/3/user/2574247).
+- Наставник: [Артём Нвосёлов](https://htmlacademy.ru/profile/id1195129)
 
 ---
 
