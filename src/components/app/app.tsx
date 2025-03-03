@@ -1,6 +1,6 @@
 import MainPage from '../../pages/main-pages/main-pages';
 
-function App():JSX.Element {
+function App() {
   return(
     <MainPage />
   );

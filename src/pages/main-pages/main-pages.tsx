@@ -1,4 +1,3 @@
-import React from 'react';
 import OfferCard from '../../components/offer-card/offer-card';
 import { cards } from '../../components/offer-card/card-data';
 import Header from '../../components/header/header';
