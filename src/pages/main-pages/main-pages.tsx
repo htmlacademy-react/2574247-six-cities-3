@@ -1,10 +1,8 @@
 import OfferCard from '../../components/offer-card/offer-card';
-import { cards } from '../../components/offer-card/card-data';
 import Header from '../../components/header/header';
 
-function MainPage(){
+function MainPage({ numbersOfCards }){
   return (
-
     <div className="page page--gray page--main">
 
       <Header/>
@@ -68,20 +66,9 @@ function MainPage(){
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {cards.map((card) =>(
-                  <OfferCard
-                    key={card.id}
-                    img={card.img}
-                    price={card.price}
-                    title={card.title}
-                    type={card.type}
-                    isPremium={card.isPremium}
-                    rating={card.rating}
-                    id={card.id}
-                  />
-                ))}
-
-
+                {
+                  Array.from({ length: numbersOfCards }, (_, index) => <OfferCard key = { index } />)
+                }
               </div>
             </section>
             <div className="cities__right-section">

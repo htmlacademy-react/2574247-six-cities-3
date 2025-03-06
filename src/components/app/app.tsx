@@ -1,8 +1,12 @@
 import MainPage from '../../pages/main-pages/main-pages';
 
-function App() {
+type AppProps = {
+  numbersOfCards: number;
+}
+
+function App({numbersOfCards}: AppProps) {
   return(
-    <MainPage />
+    <MainPage numbersOfCards={ numbersOfCards} />
   );
 }
 
