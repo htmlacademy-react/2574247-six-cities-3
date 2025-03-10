@@ -12,7 +12,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: 'e:htmlacademysix-sities/2574247-six-cities-3/tsconfig.json',
+    project: 'tsconfig.json',
   },
   settings: { react: { version: 'detect' } },
   plugins: ['react-refresh'],
