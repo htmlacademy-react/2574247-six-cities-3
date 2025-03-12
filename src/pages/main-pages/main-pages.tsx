@@ -1,48 +1,49 @@
+import { Link } from 'react-router-dom';
 import OfferCard from '../../components/offer-card/offer-card';
-import { cards } from '../../components/offer-card/card-data';
 import Header from '../../components/header/header';
 
-function MainPage(){
+type MainProps = {
+  numbersOfCards: number;
+}
+
+function MainPage({ numbersOfCards }: MainProps){
   return (
-
     <div className="page page--gray page--main">
-
       <Header/>
-
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
           <section className="locations container">
             <ul className="locations__list tabs__list">
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#">
+                <Link className="locations__item-link tabs__item" to="/">
                   <span>Paris</span>
-                </a>
+                </Link>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#">
+                <Link className="locations__item-link tabs__item" to="/">
                   <span>Cologne</span>
-                </a>
+                </Link>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#">
+                <Link className="locations__item-link tabs__item" to="/">
                   <span>Brussels</span>
-                </a>
+                </Link>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item tabs__item--active">
+                <Link className="locations__item-link tabs__item tabs__item--active" to="/">
                   <span>Amsterdam</span>
-                </a>
+                </Link>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#">
+                <Link className="locations__item-link tabs__item" to="/">
                   <span>Hamburg</span>
-                </a>
+                </Link>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#">
+                <Link className="locations__item-link tabs__item" to="/">
                   <span>Dusseldorf</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
@@ -68,20 +69,9 @@ function MainPage(){
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {cards.map((card) =>(
-                  <OfferCard
-                    key={card.id}
-                    img={card.img}
-                    price={card.price}
-                    title={card.title}
-                    type={card.type}
-                    isPremium={card.isPremium}
-                    rating={card.rating}
-                    id={card.id}
-                  />
-                ))}
-
-
+                {
+                  Array.from({ length: numbersOfCards }, (_, index) => <OfferCard key = { index } />)
+                }
               </div>
             </section>
             <div className="cities__right-section">
